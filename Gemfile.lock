@@ -102,8 +102,10 @@ GEM
       reline (>= 0.3.8)
     drb (2.2.1)
     erubi (1.13.1)
+    foreman (0.88.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    htmlbeautifier (1.4.3)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.1.0)
@@ -215,6 +217,8 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.2.1)
+    rbs (3.9.2)
+      logger
     rdoc (6.13.1)
       psych (>= 4.0.0)
     regexp_parser (2.10.0)
@@ -249,6 +253,13 @@ GEM
       rubocop (>= 1.72)
       rubocop-performance (>= 1.24)
       rubocop-rails (>= 2.30)
+    ruby-lsp (0.23.14)
+      language_server-protocol (~> 3.17.0)
+      prism (>= 1.2, < 2.0)
+      rbs (>= 3, < 4)
+      sorbet-runtime (>= 0.5.10782)
+    ruby-lsp-rails (0.4.0)
+      ruby-lsp (>= 0.23.0, < 0.24.0)
     ruby-progressbar (1.13.0)
     rubyzip (2.4.1)
     securerandom (0.4.1)
@@ -258,6 +269,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sorbet-runtime (0.5.12039)
     sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
       logger
@@ -328,11 +340,16 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  foreman (~> 0.88.1)
+  htmlbeautifier (~> 1.4)
   importmap-rails
   jbuilder
   puma (>= 5.0)
   rails (~> 7.2.2, >= 7.2.2.1)
+  rubocop (~> 1.75)
   rubocop-rails-omakase
+  ruby-lsp (~> 0.23.14)
+  ruby-lsp-rails (~> 0.4.0)
   selenium-webdriver
   sprockets-rails
   sqlite3 (>= 1.4)
