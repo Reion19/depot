@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Product.delete_all
 
 Product.create!(title: 'Design and Build Great Web APIs',
