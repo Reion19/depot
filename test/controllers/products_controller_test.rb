@@ -45,12 +45,13 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to product_url(@product)
   end
 
-  test 'cant delete product in card' do
+  test 'cant delete product in cart' do
     assert_difference('Product.count', 0) do
       delete product_url(products(:two))
     end
 
     assert_redirected_to products_url
+    assert_match(/could not be destroyed/i, flash[:alert])
   end
 
   test 'should destroy product' do
