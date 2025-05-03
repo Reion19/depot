@@ -64,7 +64,7 @@ gem 'foreman', '~> 0.88.1'
 
 gem 'rubocop', '~> 1.75'
 
-gem 'ruby-lsp-rails', '~> 0.4.0'
+gem 'ruby-lsp-rails', '~> 0.4.2'
 
 gem 'ruby-lsp', '~> 0.23.14'
 
