@@ -52,6 +52,14 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
+
+  gem 'rubocop', '~> 1.75'
+
+  gem 'ruby-lsp-rails', '~> 0.4.0'
+
+  gem 'ruby-lsp', '~> 0.23.14'
+
+  gem 'htmlbeautifier', '~> 1.4'
 end
 
 group :test do
@@ -62,10 +70,7 @@ end
 
 gem 'foreman', '~> 0.88.1'
 
-gem 'rubocop', '~> 1.75'
+gem 'html2slim-ruby3', '~> 0.2.1'
 
-gem 'ruby-lsp-rails', '~> 0.4.0'
-
-gem 'ruby-lsp', '~> 0.23.14'
-
-gem 'htmlbeautifier', '~> 1.4'
+gem 'slim', '~> 5.2'
+gem 'slim-rails', '~> 3.7'

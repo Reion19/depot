@@ -1,0 +1,5 @@
+- content_for :title, "New order"
+.md:w-2/3.w-full
+  h1.font-bold.text-4xl
+    | Please Enter Your Details
+  = render "form", order: @order

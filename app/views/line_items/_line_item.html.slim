@@ -1,0 +1,14 @@
+- if line_item == @current_item
+  tr.line-item-highlight
+
+- else
+  tr
+
+td.text-right
+  = line_item.quantity
+td
+  | &times;
+td.pr-2
+  = line_item.product.title
+td.text-right.font-bold
+  = number_to_currency(line_item.total_price)

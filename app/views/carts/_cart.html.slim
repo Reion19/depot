@@ -1,0 +1,16 @@
+| <div id="
+= dom_id cart
+| " class="w-full sm:w-auto my-5 space-y-5"> 
+h2.font-bold.text-lg.mb-3
+  | Your Cart
+table.table-auto
+  = render cart.line_items
+  tfoot
+    tr
+      th.text-right.pr-2.pt-2[colspan="3"]
+        | Total
+      td.text-right.pt-2.font-bold.border-t-2.border-black
+        = number_to_currency(cart.total_price)
+.flex.mt-1
+  = button_to "Empty Cart", cart, method: :delete, class: "ml-4 rounded-lg py-1 px-2 text-white bg-green-600"
+  = button_to "Checkout", new_order_path, method: :get, class: "ml-4 rounded-lg py-1 px-2 text-black bg-green-200"
