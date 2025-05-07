@@ -23,21 +23,22 @@ html
     section.flex
       nav.bg-green-900.p-6
         - if @cart and not @cart.line_items.empty?
-          #cart.bg-white.rounded.p-2
+          #cart 
             = render partial: 'layouts/cart', locals: { cart: @cart }
-        ul.text-gray-300.leading-8
-
-        li
-        a[href="/"]
-          | Home
-        li
-        a[href="/questions"]
-          | Questions
-        li
-        a[href="/news"]
-          | News
-        li
-        a[href="/contact"]
-          | Contact
+          
+        .text-gray-300.leading-8
+          ul
+            li
+              a[href="/"]
+                | Home
+            li
+              a[href="/questions"]
+                | Questions
+            li
+              a[href="/news"]
+                | News
+            li
+              a[href="/contact"]
+                | Contact
       main.container.mx-auto.mt-4.px-5.flex
         = yield

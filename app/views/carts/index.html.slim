@@ -16,6 +16,6 @@
           = link_to "Show", cart, class: "w-full sm:w-auto text-center rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium"
           = link_to "Edit", edit_cart_path(cart), class: "w-full sm:w-auto text-center rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium"
           = button_to "Destroy", cart, method: :delete, class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 text-white bg-red-600 hover:bg-red-500 font-medium cursor-pointer", data: { turbo_confirm: "Are you sure?" }
-  - else
-    p.text-center.my-10
-      | No carts found.
+    - else
+      p.text-center.my-10
+        | No carts found.
