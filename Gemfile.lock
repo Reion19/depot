@@ -256,6 +256,10 @@ GEM
       rubocop (>= 1.72)
       rubocop-performance (>= 1.24)
       rubocop-rails (>= 2.30)
+    rubocop-slim (0.3.0)
+      lint_roller (>= 1.1)
+      rubocop (>= 1.72.1)
+      slimi (~> 0.7)
     ruby-lsp (0.23.16)
       language_server-protocol (~> 3.17.0)
       prism (>= 1.2, < 2.0)
@@ -279,6 +283,10 @@ GEM
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (>= 3.0, < 6.0, != 5.0.0)
+    slimi (0.7.6)
+      temple
+      thor
+      tilt
     sorbet-runtime (0.5.12067)
     sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
@@ -361,6 +369,7 @@ DEPENDENCIES
   rails (~> 7.2.2, >= 7.2.2.1)
   rubocop (~> 1.75)
   rubocop-rails-omakase
+  rubocop-slim (~> 0.3.0)
   ruby-lsp (~> 0.23.14)
   ruby-lsp-rails (~> 0.4.0)
   selenium-webdriver

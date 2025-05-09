@@ -10,7 +10,7 @@
       tr
         td[colspan="3"]
           .mt-8
-            = link_to 'New product', new_product_path, class: "inline rounded-lg py-3 px-5 bg-green-600 ʼtext-white block font-medium"
+            = link_to 'New product', new_product_path, class: 'inline rounded-lg py-3 px-5 bg-green-600 ʼtext-white block font-medium'
     tbody
       - @products.each do |product|
         tr.=cycle('bg-green-50', 'bg-white')
@@ -30,4 +30,4 @@
             li
               = link_to 'Edit', edit_product_path(product), class: 'hover:underline'
             li
-              = link_to 'Destroy', product, class: 'hover:underline', data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }
+              = link_to 'Destroy', product, class: 'hover:underline', data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }

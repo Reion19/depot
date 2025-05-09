@@ -20,6 +20,6 @@
     = form.email_field :email, class: "input-field"
   .my-5
     = form.label :pay_type
-    = form.select :pay_type, Order.pay_types.keys, {prompt: "Select a payment method"}, class: "input-field"
+    = form.select :pay_type, Order.pay_types.keys, {prompt: 'Select a payment method'}, class: 'input-field'
   .inline
-    = form.submit "Place order", class: "rounded-lg py-3 px-5 bg-green-200 text-black inline-block font-medium cursor-pointer"
+    = form.submit 'Place order', class: 'rounded-lg py-3 px-5 bg-green-200 text-black inline-block font-medium cursor-pointer'
