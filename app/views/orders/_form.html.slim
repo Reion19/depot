@@ -18,8 +18,15 @@
   .my-5
     = form.label :email
     = form.email_field :email, class: "input-field"
-  .my-5
-    = form.label :pay_type
-    = form.select :pay_type, Order.pay_types.keys, {prompt: 'Select a payment method'}, class: 'input-field'
+  . data-controller="payment"
+    .my-5
+      = form.label :pay_type
+      = form.select :pay_type, Order.pay_types.keys, {prompt: 'Select a payment method'}, "data-payment-target" => "selection", 'data-action' => 'payment#showAdditionalFields', class: 'input-field'
+
+    = render partial: 'check', locals: {form: form} 
+    = render partial: 'cc', locals: {form: form}
+    = render partial: 'po', locals: {form: form} 
+ 
+    
   .inline
     = form.submit 'Place order', class: 'rounded-lg py-3 px-5 bg-green-200 text-black inline-block font-medium cursor-pointer'

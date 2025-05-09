@@ -1,5 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
+// this is from iteration G2
+
 // Connects to data-controller="payment"
 export default class extends Controller {
   static targets = ["selection", "additionalFields"]

@@ -23,7 +23,7 @@ html
     section.flex
       nav.bg-green-900.p-6
         .
-          - if @cart&.line_items.any?
+          - if @cart&.line_items&.any?
               = render partial: 'layouts/cart', locals: { cart: @cart }
           - else 
               #cart
