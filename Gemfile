@@ -74,3 +74,5 @@ gem 'html2slim-ruby3', '~> 0.2.1'
 
 gem 'slim', '~> 5.2'
 gem 'slim-rails', '~> 3.7'
+
+gem 'rubocop-slim', '~> 0.3.0'
