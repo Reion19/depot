@@ -1,4 +1,4 @@
-- if cart and cart.line_items.any?
+- if cart&.line_items.any?
   #cart.bg-white.rounded.p-2
     = render cart
 - else
