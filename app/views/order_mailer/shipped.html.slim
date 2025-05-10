@@ -1,0 +1,13 @@
+h3 Pragmatic Order Shipped 
+
+p 
+  This is just ley you know that we've shipped your recent order: 
+
+
+table   
+  tr
+    th colspan="2"
+      Qty 
+    th 
+      Description 
+  = render @order.line_items

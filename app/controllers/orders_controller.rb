@@ -30,6 +30,8 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.save
         Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
+        OrderMailer.received(@order).deliver_later
         format.html { redirect_to store_index_path, notice: 'Tank you for your order.' }
         format.json { render :show, status: :created, location: @order }
       else
