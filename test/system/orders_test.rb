@@ -81,7 +81,7 @@ class OrdersTest < ApplicationSystemTestCase
     assert_equal 'Check', order.pay_type
     assert_equal 1, order.line_items.size
 
-    mail = ActionMailer::Base.deliveries.last
+    ActionMailer::Base.deliveries.last
 
     # assert_equal ['dave@example.com'], mail.to # TODO: FIX IT
     # assert_equal 'R19 <hryhoriiboiko19@gmail.com>', mail[:from].value

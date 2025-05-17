@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class OrderMailer < ApplicationMailer
   default from: 'R19 <hryhoriiboiko19@gmail.com>'
   # Subject can be set in your I18n file at config/locales/en.yml
