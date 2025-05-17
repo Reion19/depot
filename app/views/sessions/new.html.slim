@@ -1,2 +1,17 @@
-h1 Sessions#new
-p Find me in app/views/sessions/new.html.slim
+.mx-auto.md:w-2/3.w-full
+  - if notice.present?
+    p#notice.py-2.px-3.bg-green-50.mb-5.text-green-500.font-medium.rounded-lg.inline-block = notice
+
+  = form_tag do
+    h2.font-bold.text-3xl Please Log In
+
+    .my-5
+      = label_tag :name, 'Name:'
+      = text_field_tag :name, params[:name], class: "input-field"
+
+    .my-5
+      = label_tag :password, 'Password:'
+      = password_field_tag :password, params[:password], class: "input-field"
+
+    .actions
+      = submit_tag "Login", class: "rounded-lg py-3 px-5 bg-green-600 text-black inline-block font-medium cursor-pointer"
