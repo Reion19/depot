@@ -1,12 +1,15 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get "support_requests/index"
   get 'admin' => 'admin#index'
   controller :sessions do
     get 'login' => :new
     post 'login' => :create
     delete 'logout' => :destroy
   end
+
+  resources :support_requests, only: %i[index update]
 
   resources :users
   resources :orders
