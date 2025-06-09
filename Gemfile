@@ -53,7 +53,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 
-  gem 'rubocop', '~> 1.75'
+  gem 'rubocop', '~> 1.76'
 
   gem 'ruby-lsp-rails', '~> 0.4.0'
 
